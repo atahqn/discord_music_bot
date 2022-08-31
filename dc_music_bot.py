@@ -6,6 +6,7 @@ from discord.ext import commands
 import youtube_dl
 import asyncio
 from random import choice
+TOKEN = "" #api_key
 youtube_dl.utils.bug_reports_message = lambda: ''
 
 ytdl_format_options = {
@@ -114,4 +115,4 @@ status = ["Berkay'ın hayatıyla","Alper'in hayatıyla"]
 @Bot.command(name='change_status',help='This command changes the status of the bot')
 async def change_status(ctx):
     await Bot.change_presence(activity=discord.Game(choice(status)))
-Bot.run('ODQwMTQ4NTUyODY4NDI5ODI0.YJT_UA.r4mY9vVpedzungA1Gfmd5UAK6cQ')
+Bot.run(TOKEN)
